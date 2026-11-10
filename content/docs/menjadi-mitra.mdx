@@ -30,6 +30,9 @@ Sebelum mengisi formulir pendaftaran kemitraan, persiapkan beberapa dokumen dan 
 2. Klik tombol **Ajukan Kemitraan** pada level yang diinginkan (**Sub-Agen**, **Agen**, atau **Distributor**).
 3. Anda akan diarahkan ke halaman formulir pendaftaran. *(Catatan: Level kemitraan masih dapat diubah pada bagian atas formulir)*.
 
+> **Penting (Tidak Dapat Downgrade):**  
+> Level kemitraan hanya dapat dipertahankan atau dinaikkan. Apabila Anda sudah terdaftar pada level tertentu, Anda **tidak dapat mengajukan level yang lebih rendah** (*downgrade*) dari level saat ini.
+
 ![Tampilan Level Mitra](/image/level-mitra.png)
 
 ---
@@ -49,6 +52,8 @@ Pada tahap pertama, isi data identitas dan unggah dokumen pendukung yang valid:
 ### 3. Step 2: Cakupan Wilayah & Lokasi
 Pada tahap kedua, Anda wajib menentukan wilayah operasional kemitraan:
 * Pilih **Provinsi**, **Kota/Kabupaten**, **Kecamatan**, dan **Kelurahan/Desa**.
+* Isi **Nama Downline** pada kolom yang tersedia.
+{/* TODO: jelaskan fungsi Nama Downline, apakah wajib/opsional, dan ketentuan pengisiannya */}
 * Isi **Alamat Lengkap** operasional/toko Anda.
 * Tentukan **Titik Lokasi (Koordinat)** pada peta interaktif yang disediakan.
 * Setelah sesuai, klik tombol **Lanjut**.
@@ -65,6 +70,9 @@ Pada tahap ketiga, Anda harus melengkapi dokumen kerja sama resmi (MoU):
 4. Centang pernyataan **Persetujuan MoU**, lalu klik **Lanjut**.
 5. *Penting*: Kirimkan berkas fisik MoU tersebut ke alamat kantor PT Java Rata Indonesia yang tertera pada panduan.
 
+> **Wajib Dicentang:**  
+> Kotak pernyataan **Persetujuan MoU** pada step ini perlu dicentang agar Anda dapat melanjutkan ke step berikutnya.
+
 ![Step 3 Persetujuan MoU](/image/step3-mitra-1.png)
 ![Step 3 Persetujuan MoU](/image/step3-mitra-2.png)
 
@@ -76,13 +84,18 @@ Pada tahap akhir, Anda dapat memeriksa estimasi kewajiban pembelian stok awal:
 * Centang kotak pernyataan **Persetujuan Invoice**.
 * Klik **Kirim Pengajuan Kemitraan** untuk menyelesaikan pendaftaran.
 
+> **Wajib Dicentang:**  
+> Kotak pernyataan **Persetujuan Invoice** pada step ini perlu dicentang sebelum pengajuan dapat dikirim.
+
 ![Step 4 Invoice dan Konfirmasi](/image/step4-mitra.png)
 
 ---
 
 ## Status & Tahapan Peninjauan Kemitraan
 
-Setelah pengajuan dikirimkan, Anda dapat memantau perkembangan status verifikasi secara *real-time* melalui alur berikut:
+Setelah pengajuan dikirimkan, Anda akan melihat halaman **Status Pengajuan** yang menampilkan tahapan (*step*) proses kemitraan. Halaman ini akan berubah tampilan sesuai kondisi pengajuan Anda: **Perlu Perbaikan (Revisi)**, **Ditolak**, **Pembelian Awal**, dan **Disetujui**. Anda dapat memantau perkembangan status verifikasi secara *real-time* melalui alur berikut:
+
+![Halaman Status Pengajuan Kemitraan](/image/mitra-status.png)
 
 ### 1. Menunggu Antrean Verifikasi
 Setelah pengajuan berhasil dikirim, status awal pendaftaran Anda akan menjadi **Menunggu Antrean**. Pada tahap ini, pengajuan telah tersimpan di sistem dan menunggu antrean pemeriksaan oleh tim operasional.
@@ -120,7 +133,8 @@ Setelah dokumen MoU terverifikasi, Anda diwajibkan menyelesaikan tahapan **Pembe
 2. Anda akan diarahkan ke halaman checkout transaksi khusus pembelian awal.
 3. **Ketentuan Checkout Pembelian Awal**:
    * Metode pengiriman telah terkunci otomatis menggunakan **Kurir** resmi perusahaan.
-   * Pada pilihan pembayaran, Anda dapat memilih metode **Transfer ke Rekening Perusahaan** secara langsung tanpa biaya transaksi tambahan (tanpa Gateway Xendit).
+   * Pembayaran diproses melalui gateway pembayaran **Midtrans**. Pilih metode pembayaran yang tersedia pada halaman checkout.
+   * Metode **Transfer ke Rekening Perusahaan** hanya muncul apabila **total order pembelian awal mencapai Rp300.000.000 atau lebih (≥ Rp300 juta)**. Jika total order di bawah nominal tersebut, opsi ini tidak ditampilkan. Pembayaran dengan metode ini dilakukan langsung ke rekening perusahaan tanpa melalui gateway Midtrans.
 
 ![Halaman Pembelian Awal](/image/mitra-buy.png)
 ![Halaman Checkout Pembelian Awal](/image/mitra-co-2.png)

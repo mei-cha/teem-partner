@@ -3,15 +3,20 @@ title: Target Mitra
 icon: Target
 ---
 
-Halaman **Target Mitra** berfungsi sebagai panel pemantauan performa penjualan dan capaian target pendapatan bisnis bagi Mitra. Melalui halaman ini, Mitra dapat menganalisis perbandingan antara sasaran target yang ditetapkan oleh pusat dengan realisasi pendapatan secara bulanan melalui indikator statistik, grafik visual, dan tabel detail pencapaian.
+Halaman **Target Mitra** berfungsi sebagai panel pemantauan performa penjualan dan capaian target pendapatan bisnis bagi Mitra. Melalui halaman ini, Mitra dapat menganalisis perbandingan antara sasaran target yang ditetapkan oleh pusat dengan realisasi secara bulanan melalui indikator statistik, grafik visual, dan tabel detail pencapaian. Halaman ini memiliki **2 tab**: **Target Nominal** dan **Target Kuantitas**.
 
 ---
 
 ## Antarmuka Pemantauan Target Mitra
 
-Antarmuka **Target Mitra** menyajikan performa pendapatan secara transparan yang diperbarui berdasarkan transaksi yang berhasil direalisasikan.
+Antarmuka **Target Mitra** menyajikan performa secara transparan yang diperbarui berdasarkan transaksi yang berhasil direalisasikan. Gunakan tab di bagian atas halaman untuk berpindah tampilan:
 
-![Tampilan Halaman Target Mitra](/image/target-mitra.png)
+* **Target Nominal**: Memantau target berdasarkan nilai pendapatan (Rupiah).
+* **Target Kuantitas**: Memantau target berdasarkan jumlah produk terjual.
+
+### Tab 1: Target Nominal
+
+![Tampilan Tab Target Nominal](/image/target-mitra.png)
 
 ### 1. Filter Periode (Tahun & Bulan)
 Di pojok kanan atas halaman, Mitra dapat memfilter data performa target berdasarkan periode spesifik:
@@ -54,3 +59,17 @@ Di bagian bawah antarmuka, menyajikan tabel rekapitulasi **Detail Target Bulanan
 | **PERSENTASE** | Badge persentase ketercapaian target. |
 
 *Tabel ini dilengkapi dengan kontrol paginasi untuk memudahkan navigasi jika Mitra melihat riwayat target dalam rentang waktu yang lebih panjang.*
+
+---
+
+## Tab 2: Target Kuantitas
+
+Tab **Target Kuantitas** memantau pencapaian Mitra berdasarkan **jumlah produk terjual**, bukan nominal pendapatan. Tampilan dan cara membacanya sama dengan Tab Target Nominal (filter periode, kartu ringkasan, grafik, dan tabel detail bulanan), namun seluruh angka ditampilkan dalam satuan kuantitas.
+{/* TODO: konfirmasi satuan kuantitas (unit/pcs/slop) dan apakah kartu, grafik, serta kolom tabelnya identik dengan Target Nominal */}
+
+![Tampilan Tab Target Kuantitas](/image/target-mitra-kuantitas.png)
+
+* **TARGET**: Jumlah produk yang ditargetkan terjual dalam satu bulan.
+* **REALISASI**: Jumlah produk yang berhasil terjual pada periode tersebut.
+* **SELISIH**: Selisih kuantitas antara Realisasi dan Target (`+` berarti melampaui target).
+* **PERSENTASE**: Tingkat ketercapaian target kuantitas (`(Realisasi / Target) x 100%`).

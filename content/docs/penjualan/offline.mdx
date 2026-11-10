@@ -8,6 +8,9 @@ Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjual
 > **Penting untuk Diperhatikan:**  
 > Sistem penjualan offline ini bersifat **permanen** (hanya mendukung pencatatan data). Transaksi yang telah disimpan **tidak dapat diubah (edit) maupun dihapus**. Pastikan data transaksi yang Anda masukkan sudah benar-benar sesuai sebelum mengonfirmasi transaksi.
 
+> **Catatan Ketersediaan Produk:**  
+> Daftar produk pada halaman Penjualan Offline mengambil data dari **data stok** milik Anda, bukan dari katalog pembelian stok. Misalnya, jika **Produk A** dihapus atau dinonaktifkan oleh admin, Produk A akan **hilang dari halaman Pembelian Stok** (tidak dapat dibeli lagi), tetapi **tetap tersedia di halaman Stok dan Penjualan Offline** selama masih ada stok yang tercatat.
+
 ---
 
 ## 1. Langkah-Langkah Pencatatan Penjualan Offline
@@ -15,7 +18,12 @@ Halaman **Penjualan Offline** digunakan untuk mencatat seluruh transaksi penjual
 Untuk mencatat transaksi penjualan fisik baru, ikuti tahapan berikut:
 
 1. **Pilih Produk**: Tentukan produk beserta variasi dan jumlah (*quantity*) yang dibeli oleh pelanggan pada katalog pencatatan.
-2. **Input Nama Pelanggan (Opsional)**: Masukkan nama pelanggan yang melakukan transaksi pada kolom yang tersedia.
+2. **Input Data Pelanggan (Opsional)**: Anda dapat mengisi data berikut pada kolom yang tersedia. **Seluruh kolom bersifat opsional**, boleh dikosongkan:
+   * **Nama Pelanggan**
+   * **Nomor Telepon**
+   * **Alamat**
+   * **Tujuan**
+   {/* TODO: konfirmasi arti "Tujuan" pada form (tujuan pembelian / tujuan pengiriman / lainnya) */}
 3. **Update Stok & Simpan**: Klik tombol **[Update Stok]** untuk memproses pengurangan stok otomatis dan menyimpan catatan transaksi.
 
 ![Form Pencatatan Penjualan Offline](/image/offline.png)
@@ -40,6 +48,7 @@ Pada bagian atas halaman riwayat, sistem menyajikan indikator performa transaksi
 * **Produk Terjual per Slop**: Total kuantitas unit produk yang berhasil dijual.
 
 ![Tampilan Riwayat Penjualan Offline](/image/offline-history.png)
+{/* TODO: pastikan sc riwayat sudah memakai tampilan terbaru (termasuk data telepon/alamat/tujuan jika tampil) */}
 
 ---
 
@@ -53,4 +62,4 @@ Pada bagian atas halaman riwayat, sistem menyajikan indikator performa transaksi
 
 * **Cetak Ulang Struk**: Apabila Anda membutuhkan struk fisik kembali dari transaksi terdahulu, klik tombol **[Detail Transaksi]** pada baris data yang dipilih, lalu klik tombol pencetakan struk.
 
-![Detail Transaksi dan Cetak Ulang Struk](/image/offline-detail.png) 
+![Detail Transaksi dan Cetak Ulang Struk](/image/offline-detail.png)
